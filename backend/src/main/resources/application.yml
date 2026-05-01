@@ -19,4 +19,15 @@ app:
   storage:
     upload-dir: ${UPLOAD_DIR:uploads}
   ai:
-    openai-api-key: ${OPENAI_API_KEY:}
+    provider: ${IMAGE_PROVIDER:fal}
+    public-base-url: ${APP_PUBLIC_BASE_URL:http://localhost:8080}
+    fal:
+      api-key: ${FAL_KEY:}
+      base-url: ${FAL_BASE_URL:https://fal.run}
+      endpoint-id: ${FAL_ENDPOINT_ID:fal-ai/flux-pro/kontext}
+      output-format: ${FAL_OUTPUT_FORMAT:jpeg}
+      aspect-ratio: ${FAL_ASPECT_RATIO:1:1}
+      safety-tolerance: ${FAL_SAFETY_TOLERANCE:2}
+      enhance-prompt: ${FAL_ENHANCE_PROMPT:true}
+      guidance-scale: ${FAL_GUIDANCE_SCALE:3.5}
+      num-images: ${FAL_NUM_IMAGES:1}

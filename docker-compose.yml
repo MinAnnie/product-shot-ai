@@ -31,7 +31,17 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${POSTGRES_DB:-product_shot_ai}
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-product_shot_ai}
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      IMAGE_PROVIDER: ${IMAGE_PROVIDER:-fal}
+      APP_PUBLIC_BASE_URL: ${APP_PUBLIC_BASE_URL:-http://localhost:8080}
+      FAL_KEY: ${FAL_KEY:-}
+      FAL_BASE_URL: ${FAL_BASE_URL:-https://fal.run}
+      FAL_ENDPOINT_ID: ${FAL_ENDPOINT_ID:-fal-ai/flux-pro/kontext}
+      FAL_OUTPUT_FORMAT: ${FAL_OUTPUT_FORMAT:-jpeg}
+      FAL_ASPECT_RATIO: ${FAL_ASPECT_RATIO:-1:1}
+      FAL_SAFETY_TOLERANCE: ${FAL_SAFETY_TOLERANCE:-2}
+      FAL_ENHANCE_PROMPT: ${FAL_ENHANCE_PROMPT:-true}
+      FAL_GUIDANCE_SCALE: ${FAL_GUIDANCE_SCALE:-3.5}
+      FAL_NUM_IMAGES: ${FAL_NUM_IMAGES:-1}
     ports:
       - "8080:8080"
     volumes:

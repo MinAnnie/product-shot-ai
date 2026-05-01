@@ -1,0 +1,379 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  color: #172033;
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 182, 0.28), transparent 32rem),
+    radial-gradient(circle at top right, rgba(109, 92, 255, 0.22), transparent 30rem),
+    #f7f4ef;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #8f4d76;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 780px;
+  margin-bottom: 14px;
+  font-size: clamp(2.4rem, 7vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.08em;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 1.45rem;
+}
+
+.hero-copy {
+  max-width: 700px;
+  color: #5f687a;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.plan-card,
+.panel {
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 24px 80px rgba(47, 35, 74, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 26px;
+}
+
+.plan-card span,
+.plan-card small,
+.muted,
+.limit-copy,
+.business-card small {
+  color: #6b7280;
+}
+
+.plan-card strong {
+  margin: 8px 0;
+  font-size: 2.6rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.85fr) minmax(360px, 1.15fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.panel {
+  padding: 26px;
+}
+
+.panel-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.badge {
+  border-radius: 999px;
+  background: #fff1f2;
+  color: #be123c;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.alert {
+  margin-bottom: 18px;
+  border-radius: 18px;
+  padding: 14px 16px;
+  font-weight: 700;
+}
+
+.alert-error {
+  background: #fff1f2;
+  color: #be123c;
+}
+
+.alert-success {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.business-form {
+  display: grid;
+  gap: 16px;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #374151;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(23, 32, 51, 0.13);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  color: #111827;
+  padding: 13px 14px;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.14);
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  background: #171f33;
+  color: white;
+  padding: 14px 18px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.ghost-button {
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  background: rgba(255, 255, 255, 0.72);
+  color: #172033;
+  padding: 10px 14px;
+}
+
+.empty-state {
+  display: grid;
+  gap: 6px;
+  border: 1px dashed rgba(23, 32, 51, 0.22);
+  border-radius: 20px;
+  padding: 24px;
+  color: #6b7280;
+}
+
+.empty-state strong {
+  color: #172033;
+}
+
+.business-list {
+  display: grid;
+  gap: 16px;
+}
+
+.business-card {
+  display: grid;
+  gap: 14px;
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.64);
+  padding: 18px;
+}
+
+.business-card h3 {
+  margin-bottom: 6px;
+  font-size: 1.15rem;
+}
+
+.business-card p {
+  margin-bottom: 0;
+  color: #596275;
+  line-height: 1.55;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  border-radius: 999px;
+  background: #f1eefb;
+  color: #5b21b6;
+  padding: 7px 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .content-grid,
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stepper button {
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  background: rgba(255, 255, 255, 0.62);
+  color: #172033;
+}
+
+.stepper button.active {
+  background: #171f33;
+  color: #ffffff;
+}
+
+.screen-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.95fr) minmax(360px, 1.05fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.clickable-card,
+.photo-card {
+  width: 100%;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.64);
+  color: inherit;
+  text-align: left;
+  transform: none;
+}
+
+.clickable-card:hover:not(:disabled),
+.photo-card:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.upload-box {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.upload-box input {
+  border-style: dashed;
+  padding: 24px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.photo-card {
+  display: grid;
+  gap: 8px;
+  border: 2px solid transparent;
+  padding: 10px;
+}
+
+.photo-card.active {
+  border-color: #8b5cf6;
+}
+
+.photo-card img,
+.preview {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  object-fit: cover;
+  background: #f3f4f6;
+}
+
+.photo-card span {
+  overflow: hidden;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.generation-screen {
+  display: grid;
+  gap: 18px;
+  max-width: 720px;
+}
+
+.preview {
+  max-width: 360px;
+}
+
+@media (max-width: 860px) {
+  .stepper,
+  .screen-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.result-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
